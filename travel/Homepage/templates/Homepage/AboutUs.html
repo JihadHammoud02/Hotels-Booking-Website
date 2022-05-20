@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TravelTrail</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'homepage.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+        <link rel="icon"  href="{% static 'images/logo2_aZs_icon.ico'%}">
+    </head>
+
+    <body>
+      <style>
+        body {
+            background-image: linear-gradient(rgba(2, 2, 2, 0.633), rgba(0, 0, 0, 0)), url("{% static 'images/bg.png' %}");
+            height: 100%;
+            /* Position and center the image to scale nicely on all screens */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+      </style>
+      <a href="{% url 'Homepage:logout' %}"><div class="button"><button>Log out</button></div></a>
+        <div class="topnav">
+            <a href="{% url 'Homepage:hotels_generator' %}">Home</a>
+
+            <a href="{% url 'Homepage:contact' %}">Contact us</a>
+            <a class="active" href="{% url 'Homepage:AboutUs' %}">About us</a>
+        </div>
+        <div class="hero-text">
+            <a href="homePage.html" class="brand-logo"><image src="{% static 'images/logo2.png'%}" width="60%" align="middle"></image></a>
+            <h2>Find Your Best Deal</h2>
+            <p>"The world is a book and those who do not travel read only one page"</p>
+        </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      
+        <div class="row">
+          <div class="column">
+            <div class="card">
+              <img src=https://cdn.benzinga.com/files/images/story/2021/boredapeyachtclub_nft_image_8.png alt="Jihad" style="width:100%">
+              <div class="container">
+                <h3>Jihad Hammoud</h3>
+                <p class="title">Developper</p>
+                <p>Back-end developper</p>
+                <p>jihad.hammoud@net.usj.edu.lb</p>
+                
+              </div>
+            </div>
+          </div>
+              
+          <div class="column">
+              <div class="card">
+                <img src="https://preview.redd.it/tpxvny1fbdv61.png?auto=webp&s=2c624ad00989dc058a34d62a8730061d43a05df4" alt="Jihad" style="width:100%">
+                <div class="container">
+                  <h3>Ray Bou Assy</h3>
+                  <p class="title">Developper</p>
+                  <p>Back-end developper</p>
+                  <p>ray.bouassy@net.usj.edu.lb</p>
+                  
+                </div>
+              </div>
+          </div>
+              
+          <div class="column">
+              <div class="card">
+                <img src="https://lh3.googleusercontent.com/8JRiX411_Qwv05SgRRNDVq-34edWD3265CUf5tcUu8K-X2QykFPgDdcIe8BZiWyHfIqPTC_vtn4oQqllHI6XIPoa4W0Bc9Y9-mft9uE" alt="Jihad" style="width:100%">
+                <div class="container">
+                  <h3>Emile Matta</h3>
+                  <p class="title">Developper</p>
+                  <p>Back-end developper</p>
+                  <p>emile.matta@net.usj.edu.lb</p>
+                  
+                </div>
+              </div>
+          </div>
+
+          <div class="column">
+            <div class="card">
+              <img src="https://watcher.guru/news/wp-content/uploads/2021/08/unnamed-2-1.png.webp" alt="Jihad" style="width:100%">
+              <div class="container">
+                <h3>Michel Bou Chahine</h3>
+                <p class="title">Developper</p>
+                <p>Front-end developper</p>
+                <p>michel.bouchahine@net.usj.edu.lb</p>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="card">
+              <img src="https://images.fastcompany.net/image/upload/w_596,c_limit,q_auto:best,f_auto/wp-cms/uploads/2021/12/i-Jenkins.jpg" alt="Jihad" style="width:100%">
+              <div class="container">
+                <h3>Jean-Paul Abou Jaoude</h3>
+                <p class="title">Developper</p>
+                <p>Front-end developper</p>
+                <p>jean-paul.aboujaoude@net.usj.edu.lb</p>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="card">
+              <img src="https://watcher.guru/news/wp-content/uploads/2021/09/Board-Ape-1.jpg.webp" alt="Jihad" style="width:100%">
+              <div class="container">
+                <h3>Julien Jabbour</h3>
+                <p class="title">Developper</p>
+                <p>Designer and tester</p>
+                <p>julien.jabbour@net.usj.edu.lb</p>
+                
+              </div>
+            </div>
+          </div>
+
+      </div>
+  </div>
+</body>

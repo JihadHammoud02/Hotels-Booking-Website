@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hotels</title>
+        {% load static %}
+        
+        <link rel="stylesheet" href="{% static 'homepage.css' %}">
+        <link rel="stylesheet" href="{% static 'Template.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/d3d62ba76b.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+         <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' >
+        <link rel="icon"  href="{% static 'images/logo2_aZs_icon.ico'%}">
+                                                                                        
+    </head>
+    <a href="{% url 'Homepage:logout' %}"><div class="button"><button>Log out</button></div></a>
+    <div class="topnav">
+        <a  href="{% url 'Homepage:hotels_generator' %}">Home</a>
+        <a  href="{% url 'Homepage:contact' %}">Contact us</a>
+        <a  href="{% url 'Homepage:AboutUs' %}">About us</a>
+    </div>
+<section class="packages" id="packages">
+    <div class="box-container animate__animated animate__bounceInUp">
+    {% for i  in l %}
+            <div class="box">
+                <img src="{{i.image_url}} ">
+                <div class="content ">
+                    <h2>{{i.Hotel_name}}, {{i.hotel_city}}</h2>
+                    <h4>{{i.hotel_address}}<br></h4>
+                    <h4>Checkin date:{{i.checkin_date}}<br><br></h4>
+                    <p>{{i.rating}}/10:<i class="fa-solid fa-star checked"></i></p>
+                    <div class="boxxx">
+                        <div class="price">{{i.price}}</div>
+                    </div>
+                    <br>
+                    <a href=" https://www.google.com/maps/@{{i.latitude_city}},{{i.longitude_city}},20z"><button style="height: 50px; width: 200px">View on map</button></a>
+                    <a href="{% url 'Homepage:book_now' id_hotel=i.id_Hotel name=i.Hotel_name add=i.hotel_address destination=i.hotel_city %}"><button style="height: 50px; width: 200px;padding-left:30px;">Book Now</button></a>
+                </div>
+            </div>
+        <br><br>
+    {% endfor %}
+    </div>

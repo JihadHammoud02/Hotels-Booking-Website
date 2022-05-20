@@ -1,0 +1,83 @@
+section{
+  padding:2rem 9%;
+}
+  
+  /* Set a style for all buttons */
+  button {
+    background-color: #a5134b;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  button:hover {
+    opacity:1;
+  } 
+
+/* packages section css code here */
+.packages .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:2rem;
+}
+
+.packages .box-container .box{
+  flex:1 1 30rem;
+  border-radius: .5rem;
+  overflow: hidden;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+}
+
+.packages .box-container .box img{
+  height: 25rem;
+  width:100%;
+  object-fit: cover;
+}
+
+.packages .box-container .box .content{
+  padding:2rem;
+}
+
+.packages .box-container .box .content h3{
+  font-size:1.5rem;
+  color:#333;
+}
+
+.packages .box-container .box .content p{
+  font-size:1rem;
+  color:rgb(109, 81, 81);
+}
+
+.packages .box-container .box .content .price{
+  font-size: 2rem;
+  color:#333;
+  padding-top: 1rem;
+}
+
+/* rating */
+.checked {
+  color: orange;
+}
+.center{
+  text-align: center;
+  font-size: larger;
+}
+.centerrating{
+  display: flex;
+  align-items: center;
+}
+.boxxx {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+    
+.signupterms p {float:left; margin-left:4px; margin:0;}
+
+.zoom{
+zoom: 80%;
+}

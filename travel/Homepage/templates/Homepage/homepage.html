@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TravelTrail</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'homepage.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+        <link rel="icon"  href="{% static 'images/logo2_aZs_icon.ico'%}">
+  
+    </head>
+
+    <body>
+        <style>
+            body {
+                background-image: linear-gradient(rgba(2, 2, 2, 0.633), rgba(0, 0, 0, 0)), url("{% static 'images/bg.png' %}");
+                height: 100%;
+                /* Position and center the image to scale nicely on all screens */
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: absolute;
+            }
+        </style>
+        <a href="{% url 'Homepage:logout' %}"><div class="button"><button>Log out</button></div></a>
+        <div class="hero-image">
+            <div class="topnav">
+                <a class="active" href="{% url 'Homepage:hotels_generator' %}">Home</a>
+                <a href="{% url 'Homepage:contact' %}">Contact us</a>
+                <a href="{% url 'Homepage:AboutUs' %}">About us</a>
+            </div>
+            <div class="hero-text">
+                <a href="homePage.html" class="brand-logo"><image src="{% static 'images/logo2.png'%}" width="60%" align="middle"></image></a>
+                <h2>Find Your Best Deal</h2>
+                <p>"The world is a book and those who do not travel read only one page"</p>
+            </div>
+        </div>
+<!-- packages section start here -->
+        <form action="{% url 'Homepage:hotels_generator' %}" method="post">
+            {% csrf_token %}
+            <div class="container">
+                <h3>Search For Tours</h3>
+                <p>Please fill in this form</p>
+                {% if l %}
+				<p style="color:red;">Please check your dates</p>
+		        {% endif %}
+                <hr>
+                <label for="start">Start date:</label>
+                <input type="date" id="start" name="trip-start" value="2022-01-01" min="2022-01-01" max="2030-01-01" required>
+                <label for="end">End date:</label>
+                <input type="date" id="end" name="trip-end" value="2022-01-01" min="2022-01-01" max="2040-01-01" required>
+
+                <br><br>
+                <label for="Destination"><b>Destination</b></label>
+                <input type="text" placeholder="ex: Paris..." name="Destination" required>
+          
+                <label for="number"><b>Number of Adults</b></label>
+                <input type="text" placeholder="ex: 2..." name="numofadults" required>
+          
+                <label for="number"><b>Number of kids</b></label>
+                <input type="text" placeholder="ex: 3..." name="numofkids">
+          
+          
+                <p><i>Thank you for using our services</i></p>
+          
+                <div class="clearfix">
+                    <button type="submit" class="submitbtn" value="Submit">Submit</button>
+                </div>
+            </div>
+        </form>
+        <br>
+
+<!-- packages section start here -->
+        <section class="packages" id="packages">
+        
+            <div class="box-container">
+        
+                <div class="box">
+                    <img src="https://img.traveltriangle.com/blog/wp-content/uploads/2019/01/Places-To-Visit-In-Paris_11th-jun.jpg" alt="">
+                    <div class="content">
+                        <h3> Paris </h3>
+                        <p>Paris is one of the most beautiful cities in the world. It is known worldwide for the Louvre Museum, Notre-Dame cathedral, and the Eiffel tower.<br><br></p>
+                        <button onclick="window.location.href='https://en.wikipedia.org/wiki/Paris';">Click here for more information</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F28%2F2021%2F02%2F19%2Fnew-york-city-evening-NYCTG0221.jpg&w=1100&h=737&c=sc&poi=face&q=60" alt="">
+                    <div class="content">
+                        <h3> New york</h3>
+                        <p>New York has to be one of the most famous cities in the world. Often referred to as the 'Big Apple', this vibrant city is known for its exclusive shops, flashy Broadway performances.</p>
+                        <button onclick="window.location.href='https://en.wikipedia.org/wiki/New_York_City';">Click here for more information</button>
+                    </div>
+                </div>
+        
+                <div class="box">
+                    <img src="https://phototass3.cdnvideo.ru/width/1020_b9261fa1/tass/m2/en/uploads/i/20170824/1175730.jpg" alt="">
+                    <div class="content">
+                        <h3> Moscow </h3>
+                        <p>The city is home to several UNESCO World Heritage Sites, and is well known for its display of Russian architecture, particularly its historic Red Square, and buildings such as the Saint Basil's Cathedral.</p>
+                        
+                        <button onclick="window.location.href='https://en.wikipedia.org/wiki/Moscow';">Click here for more information</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="https://cdn.britannica.com/75/181975-050-D66A977B/Fish-eye-night-view-Dubai-Marina-United-Arab.jpg" alt="">
+                    <div class="content">
+                        <h3> Dubai </h3>
+                        <p>Dubai is famous for contemporary sightseeing attractions such as the Burj Khalifa (the world's tallest building) and shopping malls that come complete with mammoth aquariums and indoor ski slopes.</p>
+                        <button onclick="window.location.href='https://en.wikipedia.org/wiki/Dubai';">Click here for more information</button>
+                    </div>
+                </div>
+        
+                <div class="box">
+                    <img src="https://media.timeout.com/images/105851513/1024/576/image.jpg" alt="">
+                    <div class="content">
+                        <h3> Los Angeles </h3>
+                        <p>With a current population of almost 4 million people, Los Angeles is one of the best places to live in California. Prized for its cultural diversity, people from all over the country and the world are moving to Los Angeles with the hopes to make their dreams come true.<br><br></p>
+                        <button onclick="window.location.href='https://en.wikipedia.org/wiki/Los_Angeles';">Click here for more information</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="https://lp-cms-production.imgix.net/2021-02/Tokyo%20Main.jpg" alt="">
+                    <div class="content">
+                        <h3> Tokyo </h3>
+                        <p>Tokyo is famous for Anime, electronics, manga, and video games. Akihabara is the epicenter if it all. It becomes a jungle of electric lights and colors at night, providing a sensory overload for visitors. Getting lost, window shopping, and photography are top activities here.<br><br></p>
+                        <button onclick="window.location.href='https://en.wikipedia.org/wiki/Tokyo';">Click here for more information</button>
+                    </div>
+                </div>
+            </div>
+        
+        </section>
+<!-- packages section end here -->
+        <!-- -----------   footer:------------- -->
+        <div class="footer-basic">
+            <footer>
+                <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+                <ul id="list-inline">
+                    <li><a class="active" href="homePage.html">Home</a></li>
+                    <li> <a href="profile.html">Profile</a>
+                    <li><a href="{% url 'Homepage:contact' %}">Contact</a></li>
+                    <li><a href="{% url 'Homepage:logout' %}">Loggout</a></li>
+                    <li><a href="{% url 'Homepage:AboutUs' %}">About</a></li>l
+                </ul>
+                <hr>
+                <p class="copyright">Travel Trail © 2022</p>
+            </footer>
+        </div>
+
+    </body>
+</html>

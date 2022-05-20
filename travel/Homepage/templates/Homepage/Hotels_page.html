@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TravelTrail</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'homepage.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+        <script src="https://kit.fontawesome.com/d3d62ba76b.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="icon"  href="{% static 'images/logo2_aZs_icon.ico'%}">
+    </head>
+
+    <body>
+    <style>
+    @keyframes slide{
+        0%{
+            transform: translateX(0);
+        }
+        25%{
+            transform: translateX(0);
+        }
+        30%{
+            transform: translateX(-100%);
+        }
+        50%{
+            transform: translateX(-100%);
+        }
+        55%{
+            transform: translateX(-200%);
+        }
+        75%{
+            transform: translateX(-200%);
+        }
+        80%{
+            transform: translateX(-300%);
+        }
+        100%{
+            transform: translateX(-300%);
+        }
+    }
+    .container{
+        position: absolute;
+        width: 700px;
+        height: 450px;
+        max-height: 100%;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        overflow: hidden;
+        top: 400px;
+        left: 50%;
+        margin-top: 30px;
+        margin-bottom: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        border: 10px solid #a5134b;
+        border-radius: 8px;
+        box-shadow: 10px 25px 30px rgba(0, 0, 0, 0.408);
+    }
+    .wrapper{
+        list-style: none;
+        animation-name: slide;
+        animation-duration: 30s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation: slide 12s ease-in-out infinite;
+        display: flex;
+        padding:0px;
+    }
+
+    .container2{
+        background-color: #ffffffb1;
+        width: 97%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        display:inline-block;
+        top:20px;
+        margin-left: auto;
+        margin-right: auto;
+        border: 10px solid #a5134b;
+        border-radius: 8px;
+        box-shadow: 10px 25px 30px rgba(0, 0, 0, 0.486);
+    }
+    .item{
+        width: fit-content;
+        padding: 5px;
+        word-wrap: break-word;
+    }
+    
+    button {
+    background-color: #a5134b;
+    color: white;
+    padding: 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    }
+    button:hover {
+    opacity:1;
+    }   
+
+/* packages section css code here */
+.packages .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  /* background-color: #ffffff; */
+  gap: 20px ;
+  padding: 70px;
+}
+
+.packages .box-container .box{
+  flex:20 20 25rem;
+  background-color: #ffffffb7;
+  border-radius: .8rem;
+  overflow: hidden;
+  box-shadow: 0 5rem 10rem rgba(0,0,0,.1);
+}
+
+.packages .box-container .box img{
+  height: 25rem;
+  width:100%;
+  object-fit: cover;
+}
+
+.packages .box-container .box .content{
+  padding:2rem;
+}
+
+.packages .box-container .box .content h3{
+  font-size:1.5rem;
+  color:#333;
+}
+
+.packages .box-container .box .content p{
+  font-size:1rem;
+  color:rgb(109, 81, 81);
+}
+
+
+/* rating */
+.checked {
+  color: orange;
+}
+.center{
+  text-align: center;
+  font-size: larger;
+}
+.centerrating{
+  display: flex;
+  align-items: center;
+}
+.boxxx {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+        body {
+                    background-image: linear-gradient(rgba(0, 0, 0, 0.235),rgba(0, 0, 0, 0.133)),url("{% static 'images/bg.png' %}");
+                    height: 100%;
+                    /* Position and center the image to scale nicely on all screens */
+                    background-attachment: fixed;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+        }
+        h3{
+            font-size: 30px;
+            padding: 25px;
+            margin-bottom: 5px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            background: #c5babaad;
+            color: rgb(255, 255, 255);
+            text-align: center;
+        }
+
+        h5{
+            color: #FFFFFF;
+            font-family:verdana;
+            text-shadow: #2A3D4E 1px 1px,#2A3D4E -0px 0px,#2A3D4E -1px 1px,#2A3D4E -2px 2px,#2A3D4E -3px 3px,#2A3D4E -4px 4px,#2A3D4E -5px 5px,#2A3D4E -6px 6px,#2A3D4E -7px 7px,#2A3D4E -8px 8px,#2A3D4E -9px 9px;
+            font-size: 50px;
+            margin-bottom:600px;
+            text-align: center;
+            position: relative;
+        }
+        p{
+            padding: 30px;
+            font-family:verdana;
+            margin: 0;
+            text-indent: 3ch;
+            font-size: 20px;
+            color: rgb(252, 252, 252);
+        }
+        li{
+            padding: 10px;
+            margin: 0;
+            font-family:verdana;
+            text-indent: 2ch;
+            font-size: 20px;
+            color: rgb(0, 0, 0);
+        }
+        h4{
+                    font-size: 25px;
+                    padding: 15px;
+                    font-family:verdana;
+                    background-color: #e8dedeb9;
+                    color: rgb(0, 0, 0);
+                    text-align: left;
+                    margin-left: 10px;
+        }
+
+    </style>
+        <!-- html page content -->
+        <div class= 'animate__animated animate__bounceInUp' ><h5>{{name}} </h5></div>
+        <div class="container ">
+            <!-- hotel images slider -->
+                    <div class="wrapper">
+                        {% for i in img %}
+                        <img src={{i}} style="height: 100%;width: 100%;">
+                        {% endfor %}
+                    </div>
+        </div>
+        <h4>Description</h4>
+                <div class="container2 ">
+                    <div class="item">
+                        <li>{{desc}}</li>
+                    </div>
+                </div>
+        <!-- hotel content and landmarks -->
+        <h4>Landmarks</h4>
+            <div class="container2">
+                <div class="item">
+                {% for i in l %}
+                    <li>{{i}}</li>
+                {% endfor %}
+                </div>
+            </div>
+        <h4>Monuments</h4>
+            <div class="container2">
+                <div class="item">
+                {% for i in l2 %}
+                    <li>{{i}}</li>
+                {% endfor %}
+                </div>
+            </div>
+        <br><br><br><br>
+        <a href="{% url 'Homepage:checkout' name=name %}"><button style="height: 50px; width: 200px;padding-left:30px;">Pay now</button></a>
+        <br>
+        <hr>
+        <br><br>
+        <!-- news section -->
+            <section class="packages" id="packages">
+                <h3>Recent News</h3>
+                <div class="box-container">
+                        {% for i in lnews %}
+                        <div class="box">
+                                <img src={{i.image}}>
+                                <div class="content">
+                                    <div><h4>{{i.title}}</h4></div>
+                                    <h2>{{i.description}}<br><br></h2>
+                                    <div class="boxxx">
+                                        <div>For more info <a href={{i.article_url}}>Click Here</a></div>
+                                    </div>
+                                    <br>
+                                </div>
+                            </div>
+                        <br><br>
+                        {% endfor %}
+                </div>
+            </section>
+
+        <footer>
+            <hr>
+            <p class="copyright">Travel Trail © 2022</p>
+        </footer>
+    
+        </body>
+    </html>
