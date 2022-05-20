@@ -8,3 +8,4 @@ https://rapidapi.com/tipsters/api/booking-com/
 
 
 2-for News:
+https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/search/NewsSearchAPI"
